@@ -1,17 +1,17 @@
 import { CalendarDays, Clock, Users2, Globe2, CheckCircle2, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Card } from './components/ui/card';
+import { Input } from './components/ui/input';
+import { Button } from './components/ui/button';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+} from './components/ui/select';
+import { Badge } from './components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
 
 function App() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -47,8 +47,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2880')] bg-cover bg-center bg-no-repeat">
-      <div className="min-h-screen w-full bg-black/60 backdrop-blur-sm">
+    <div 
+      className="min-h-screen w-full bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: "url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2880')" 
+      }}
+    >
+      <div className="min-h-screen w-full bg-black/75 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 py-16 w-full">
           {/* Header Section */}
           <div className="text-center mb-16 space-y-6">
