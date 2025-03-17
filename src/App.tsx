@@ -13,9 +13,9 @@ import { Badge } from '@/components/ui/badge';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2880')] bg-cover bg-center bg-no-repeat">
-      <div className="min-h-screen bg-black/60 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="min-h-screen w-full bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2880')] bg-cover bg-center bg-no-repeat">
+      <div className="min-h-screen w-full bg-black/60 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 py-16 w-full">
           {/* Header Section */}
           <div className="text-center mb-16 space-y-6">
             <Badge variant="secondary" className="mb-4 bg-blue-500/20 text-blue-200 border-blue-500/30 backdrop-blur-sm">
@@ -29,10 +29,10 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-8 w-full">
             {/* Event Details Card */}
-            <Card className="p-8 bg-white/10 border-white/20 backdrop-blur-md text-white h-full flex flex-col">
-              <div className="space-y-6 flex flex-col flex-1">
+            <Card className="p-8 bg-white/10 border-white/20 backdrop-blur-md text-white">
+              <div className="space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 border border-blue-500/30">
                   <Users2 className="h-5 w-5" />
                   <span className="text-sm font-medium">Limited to 100 healthcare professionals</span>
@@ -84,14 +84,14 @@ function App() {
             </Card>
 
             {/* Registration Form Card */}
-            <Card className="p-8 bg-white backdrop-blur-xl h-full">
-              <div className="space-y-6 h-full flex flex-col justify-between">
+            <Card className="p-8 bg-white backdrop-blur-xl">
+              <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900">Reserve Your Spot</h2>
                   <p className="text-gray-600 mt-2">Exclusive for healthcare professionals</p>
                 </div>
                 
-                <form className="space-y-5 flex-1 flex flex-col">
+                <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-gray-900">First Name</label>
@@ -161,15 +161,15 @@ function App() {
                   </div>
 
                   <Button 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-lg h-12 gap-2 mt-auto" 
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-lg h-12 gap-2" 
                     size="lg"
                   >
                     Register Now
                     <ArrowRight className="h-5 w-5" />
                   </Button>
 
-                  <p className="text-xs text-gray-500 text-center">
-                    By registering, you agree to our terms of service and privacy policy.
+                  <p className="text-sm text-gray-500 text-center">
+                    By registering, you agree to our terms of service and privacy policy.<br />
                     This activity has been planned and implemented in accordance with accreditation requirements.
                   </p>
                 </form>
